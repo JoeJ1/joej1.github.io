@@ -1,6 +1,6 @@
 *{
   font-family: sans-serif;
-  font-size: 1em;
+  font-size: 1em; /* em is used to vary size for devices of different width.*/
 }
 html, body{
   margin: 0;
@@ -24,10 +24,7 @@ div.header h1{
   color: #ffffff;
 }
 
-h1{
-  font-size: 1.5em;
-}
-
+/*All the content in the page below the header*/
 div.content{
   padding-top: 7.5em;
   background-color: #ffffff;
@@ -36,4 +33,16 @@ div.content{
   display: inline-block;
   text-align: center;
   font-size: 1.25em;
+}
+
+/*everything else*/
+
+h1{
+  font-size: 1.5em;
+}
+
+div.seperatorLine{
+  display: inline-block;
+  width: 60%;
+  border-bottom: 0.01em solid #aebfbe;
 }
