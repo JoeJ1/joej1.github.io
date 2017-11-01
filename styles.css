@@ -5,14 +5,16 @@
 html, body{
   margin: 0;
   padding: 0;
-  background-color: #e0f2f1;
+  background-color: #ffffff;
   text-align: center;
+  width: 100%;
 }
 
 div.header{
+  width: inherit;
+  position: fixed;
   text-align: center;
   padding: 1em;
-  width: 100%;
   display: block;
   background-color: #00796b;
   border-bottom: 0.5em solid #004c40;
@@ -27,7 +29,8 @@ h1{
 }
 
 div.content{
-  background-color: #e0f2f1;
+  padding-top: 7.5em;
+  background-color: #ffffff;
   margin: 0;
   width: 75%;
   display: inline-block;
