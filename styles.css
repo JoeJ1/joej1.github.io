@@ -46,3 +46,27 @@ div.seperatorLine{
   width: 60%;
   border-bottom: 0.01em solid #aebfbe;
 }
+
+div.buttons{
+  align-self: center;
+  text-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+}
+
+
+div.button{
+  color: #ffffff;
+  display: inline-block;
+  padding: 1em 1em 1em;
+  margin: 1em 1em 0em;
+  margin-bottom: 1em;
+  width: 10%;
+  background-color: #00796b;
+}
+
+div.button:hover{
+  border-bottom: 0.5em solid #004c40;
+  margin-bottom: 0.5em;
+}

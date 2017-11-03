@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JoeJ1 (personal projects)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- setting witdth to be variable (for different sized screens) -->
+    <meta name="description" content="A site for my simple personal projects ">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../styles.css"> <!-- importing css -->
+    <script type="text/javascript" src="gameOfPig.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Game of Pig</h1>
+    </div>
+    <!-- All content below the header -->
+    <div class="content">
+      <div class="buttons"><div class="button" onclick="window.open('../index.html','_self')">Home</div></div>
+      <h2>
+      Game of Pig
+      </h2>
+      <h3>
+      Rules:
+      </h3>
+      <p>-If the player rolls a 1, they score nothing and it becomes the next player's turn.<br/>-If the player rolls any other number, it is added to their turn total and the player's turn continues.<br/>-If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.<br/><br/><br/></p>
+      <strong><p class="playerIndicator" id="playerIndicator">Player1's turn</p></strong>
+      <div class="gameOfPig">
+        <p class="thisRoundScoreText"> This turn score: </p>
+        <p class="thisRoundScore" id="thisRoundScore">0</p>
+        <img src="6.png" alt="Dice" id="diceImage">
+        <p class="player1ScoreText">Player 1 score: </p>
+        <p class="player1Score" id="player1Score">0</p>
+        <p class="player2Score">Player 2 score: </p>
+        <p class="player2Score" id="player2Score">0</p>
+        <div class="buttons">
+          <div class="button" onclick="roll();">Roll</div>
+          <div class="button" onclick="hold();">Hold</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
