@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JoeJ1 (personal projects)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- setting witdth to be variable (for different sized screens) -->
+    <meta name="description" content="A site for my simple personal projects ">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../styles.css"> <!-- importing css -->
+    <script type="text/javascript">
+      function win(player){
+        if(player == "noughts"){
+          alert("Noughts wins!")
+          document.getElementById('turnIndicator').innerHTML = "Noughts' turn"
+        }else{
+          alert("Crosses wins!")
+          document.getElementById('turnIndicator').innerHTML = "Crosses' turn"
+        }
+        document.getElementById('a1').innerHTML = '&nbsp;';
+        document.getElementById('a2').innerHTML = '&nbsp;';
+        document.getElementById('a3').innerHTML = '&nbsp;';
+        document.getElementById('b1').innerHTML = '&nbsp;';
+        document.getElementById('b2').innerHTML = '&nbsp;';
+        document.getElementById('b3').innerHTML = '&nbsp;';
+        document.getElementById('c1').innerHTML = '&nbsp;';
+        document.getElementById('c2').innerHTML = '&nbsp;';
+        document.getElementById('c3').innerHTML = '&nbsp;';
+      }
+
+      function play(position){
+        console.log("element clicked: "+position);
+        //Finding which piece to place
+        if(document.getElementById('turnIndicator').innerHTML == "Crosses' turn"){
+          turn = "X";
+        }else{
+          turn = "O";
+        }
+        console.log('Allocated piece: '+turn);
+        console.log('clicked element innerHTML: '+document.getElementById(position.toString()).innerHTML)
+        //checking if place is legal and which player to change to.
+        if(document.getElementById(position.toString()).innerHTML == "&nbsp;"){
+          document.getElementById(position.toString()).innerHTML = turn;
+          if(document.getElementById('turnIndicator').innerHTML == "Crosses' turn"){
+            document.getElementById('turnIndicator').innerHTML = "Noughts' turn";
+          }else{
+            document.getElementById('turnIndicator').innerHTML = "Crosses' turn";
+          }
+        }
+
+        //assigning short variable names to each square on the board for easier checking
+        a1 = document.getElementById('a1').innerHTML;
+        a2 = document.getElementById('a2').innerHTML;
+        a3 = document.getElementById('a3').innerHTML;
+        b1 = document.getElementById('b1').innerHTML;
+        b2 = document.getElementById('b2').innerHTML;
+        b3 = document.getElementById('b3').innerHTML;
+        c1 = document.getElementById('c1').innerHTML;
+        c2 = document.getElementById('c2').innerHTML;
+        c3 = document.getElementById('c3').innerHTML;
+
+        //checking if any player has won
+        if((a1 == 'X' && a2 == 'X' && a3 == 'X') || (a1 == 'O' && a2 == 'O' && a3 == 'O')){
+          if(a1 == 'X'){
+            win('crosses');
+          }else{
+            win('noughts')
+          }
+        }else if((b1 == 'X' && b2 == 'X' && b3 == 'X') || (b1 == 'O' && b2 == 'O' && b3 == 'O')){
+          if(b1 == 'X'){
+            win('crosses');
+          }else{
+            win('noughts')
+          }
+        }else if((c1 == 'X' && c2 == 'X' && c3 == 'X') || (c1 == 'O' && c2 == 'O' && c3 == 'O')){
+          if(c1 == 'X'){
+            win('crosses');
+          }else{
+            win('noughts')
+          }
+        }else if((a1 == 'X' && b1== 'X' && c1 == 'X') || (a1 == 'O' && b1== 'O' && c1 == 'O')){
+          if(a1 == 'X'){
+            win('crosses');
+          }else{
+            win('noughts')
+          }
+        }else if((a2 == 'X' && b2== 'X' && c2 == 'X') || (a2 == 'O' && b2 == 'O' && c2 == 'O')){
+          if(a2 == 'X'){
+            win('crosses');
+          }else{
+            win('noughts')
+          }
+        }else if((a3 == 'X' && b3 == 'X' && c3 == 'X') || (a3 == 'O' && b3 == 'O' && c3 == 'O')){
+          if(a3 == 'X'){
+            win('crosses')
+          }else{
+            win('noughts')
+          }
+        }else if((a1 == 'X' && b2 == 'X' && c3 == 'X') || (a1 == 'O' && b2 == 'O' && c3 == 'O')){
+          if(a1 == 'X'){
+            win('crosses');
+          }else{
+            win('noughts')
+          }
+        }else if((a3 == 'X' && b2 == 'X' && c1 == 'X') || (a3 == 'O' && b2 == 'O' && c1 == 'O')){
+          if(a3 == 'X'){
+            win('crosses')
+          }else{
+            win('noughts')
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Noughts and Crosses / Tic-Tac-Toe</h1>
+    </div>
+    <!-- All content below the header -->
+    <div class="content">
+      <div class="buttons"><div class="button" onclick="window.open('../index.html','_self');">Home</div></div>
+      <div class="noughtsAndCrosses">
+      <h3 class="turnIndicator" id="turnIndicator">Crosses' turn</h3>
+      <div class="noughtsAndCrossesRow1"><button class="noughtsAndCrossesSquare" onclick="play('a1');" id="a1">&nbsp;</button><button class="noughtsAndCrossesSquare" onclick="play('a2');" id="a2">&nbsp;</button><button class="noughtsAndCrossesSquare" onclick="play('a3');" id="a3">&nbsp;</button></div>
+      <div class="noughtsAndCrossesRow2"><button class="noughtsAndCrossesSquare" onclick="play('b1');" id="b1">&nbsp;</button><button class="noughtsAndCrossesSquare" onclick="play('b2');" id="b2">&nbsp;</button><button class="noughtsAndCrossesSquare" onclick="play('b3');" id="b3">&nbsp;</button></div>
+      <div class="noughtsAndCrossesRow3"><button class="noughtsAndCrossesSquare" onclick="play('c1');" id="c1">&nbsp;</button><button class="noughtsAndCrossesSquare" onclick="play('c2');" id="c2">&nbsp;</button><button class="noughtsAndCrossesSquare" onclick="play('c3');" id="c3">&nbsp;</button></div>
+      </div>
+    </div>
+  </body>
+</html>
