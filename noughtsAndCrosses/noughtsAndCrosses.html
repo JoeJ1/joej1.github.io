@@ -11,9 +11,12 @@
         if(player == "noughts"){
           alert("Noughts wins!")
           document.getElementById('turnIndicator').innerHTML = "Noughts' turn"
-        }else{
+        }else if(player == "crosses"){
           alert("Crosses wins!")
           document.getElementById('turnIndicator').innerHTML = "Crosses' turn"
+        }else{
+          alert("Draw. Everyone loses!");
+          document.getElementById('turnIndicator').innerHTML = "Noughts' turn";
         }
         document.getElementById('a1').innerHTML = '&nbsp;';
         document.getElementById('a2').innerHTML = '&nbsp;';
@@ -106,7 +109,8 @@
           }else{
             win('noughts')
           }
-        }else if(a1 != '&nbsp;' && a2 != '&nbsp;' && a3 != '&nbsp;' && b1 != '&nbsp;' && b2 != '&nbsp;' && b3 != '&nbsp;' && c1 != '&nbsp;' && c2 != '&nbsp;' && c3 != '&nbsp;' )
+        }else if(a1 != '&nbsp;' && a2 != '&nbsp;' && a3 != '&nbsp;' && b1 != '&nbsp;' && b2 != '&nbsp;' && b3 != '&nbsp;' && c1 != '&nbsp;' && c2 != '&nbsp;' && c3 != '&nbsp;'
+        }
       }
     </script>
   </head>
