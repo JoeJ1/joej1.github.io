@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#00796b">
     <link rel="stylesheet" type="text/css" href="../styles.css"> <!-- importing css -->
     <script type="text/javascript">
-      function translate(){
+      function run(){
         var text = "";
         text = document.getElementById('textInput').value;
         var textArray = [];
@@ -107,7 +107,7 @@
       <div class="morseTranslator" style="margin-top:5vh;">
         <p>Please only use letters and spaces.<br/>Untranslated Charachters represented with '!'</p>
         <input type="text" name="Text: " class="textInput" autofocus id="textInput"><br/>
-         <button type="button" style="margin-top:2vh;" onclick="translate();">Convert</button>
+         <button type="button" style="margin-top:2vh;" onclick="run();">Convert</button>
         <p class="textOutput" id="textOutput">.</p>
       </div>
     </div>
