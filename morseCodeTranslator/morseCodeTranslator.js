@@ -79,6 +79,16 @@
             morseArray.push('___..');
           }else if(textArray[i].toLowerCase() == "9"){
             morseArray.push('____.');
+          }else if(textArray[i].toLowerCase() == "."){
+            morseArray.push('._._._')
+          }else if(textArray[i].toLowerCase() == ","){
+            morseArray.push('__..__')
+          }else if(textArray[i].toLowerCase() == "?"){
+            morseArray.push('..__..')  
+          }else if(textArray[i].toLowerCase() == "\'"){
+            morseArray.push('.____.')
+          }else if(textArray[i].toLowerCase() == "!"){
+            morseArray.push('_._.__')
           }else{
             morseArray.push('!');
           }
