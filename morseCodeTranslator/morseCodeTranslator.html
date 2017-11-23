@@ -17,9 +17,10 @@
     <div class="content">
       <div class="buttons"><div class="button" onclick="window.open('../index.html','_self');">Home</div></div>
       <div class="morseTranslator" style="margin-top:5vh;">
-        <p>Please only use letters and spaces.<br/>Untranslated Characters represented with '!'</p>
+        <p>Please only use letters and spaces.<br/>Untranslated Characters removed from message</p>
         <input type="text" name="Text: " class="textInput" autofocus id="textInput"><br/>
-         <button type="button" style="margin-top:2vh;" onclick="run();">Convert</button>
+         <button type="button" style="margin-top:2vh;" onclick="run();" id="runButton" class="button">Convert</button>
+         <button type="button" style="margin-top:2vh;" onclick="toggleMode();" id="toggleButton" class="button">English to Morse</button>
         <p class="textOutput" id="textOutput"></p>
       </div>
     </div>
