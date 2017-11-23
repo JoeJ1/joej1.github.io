@@ -42,8 +42,8 @@ h1{
 }
 
 button.noughtsAndCrossesSquare{
-  width: 15vh;
-  height: 15vh;
+  width: 10vw;
+  height: 10vw;
   display: inline-block;
   color: #000000;
   background-color: #ffffff;
@@ -52,9 +52,10 @@ button.noughtsAndCrossesSquare{
 }
 
 div.seperatorLine{
+  margin-bottom: 0.75em;
   display: inline-block;
   width: 60%;
-  border-bottom: 0.01em solid #aebfbe;
+  border-bottom: 0.1em solid #aebfbe;
 }
 .buttons{
   border: none;
