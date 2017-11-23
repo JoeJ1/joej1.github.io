@@ -14,9 +14,9 @@ function run(){
   for(i = 0;i<textArray.length; i++){
       try{
         if(toggleButtonState == 'English to Morse'){
-          outputArray.push(morseTranslateArray[englishTranslateArray.indexOf(textArray[i].toString())])
+          outputArray.push(morseTranslateArray[englishTranslateArray.indexOf(textArray[i].toString().toLowerCase())])
         }else{
-          outputArray.push(englishTranslateArray[morseTranslateArray.indexOf(textArray[i].toString())])
+          outputArray.push(englishTranslateArray[morseTranslateArray.indexOf(textArray[i].toString().toLowerCase())])
         }
       }
       catch(err){
