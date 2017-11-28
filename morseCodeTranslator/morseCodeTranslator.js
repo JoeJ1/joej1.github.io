@@ -1,7 +1,6 @@
 function run(){
-  var text = "";
-  var toggleButtonState = document.getElementById('toggleButton').innerHTML
-  text = document.getElementById('textInput').value;
+  var text = document.getElementById('textInput').value;
+  var toggleButtonState = document.getElementById('toggleButton').innerHTML;
   var textArray = [];
   if(toggleButtonState == 'English to Morse'){ //If this is the case it must currently be translating english to morse.
     textArray = text.split('');
@@ -14,27 +13,27 @@ function run(){
   for(i = 0;i<textArray.length; i++){
       try{
         if(toggleButtonState == 'English to Morse'){
-          outputArray.push(morseTranslateArray[englishTranslateArray.indexOf(textArray[i].toString().toLowerCase())])
+          outputArray.push(morseTranslateArray[englishTranslateArray.indexOf(textArray[i].toString().toLowerCase())]);
         }else{
-          outputArray.push(englishTranslateArray[morseTranslateArray.indexOf(textArray[i].toString().toLowerCase())])
+          outputArray.push(englishTranslateArray[morseTranslateArray.indexOf(textArray[i].toString().toLowerCase())]);
         }
       }
       catch(err){
-        outputArray.push('')
+        outputArray.push('');
       }
   }
   if(toggleButtonState == 'English to Morse'){
     document.getElementById('textOutput').innerHTML = outputArray.join(' ');
   }else{
-    document.getElementById('textOutput').innerHTML = outputArray.join('')
+    document.getElementById('textOutput').innerHTML = outputArray.join('');
   }
 }
 
 function toggleMode(){
-  var toggleButton = document.getElementById('toggleButton')
+  var toggleButton = document.getElementById('toggleButton');
   if(toggleButton.innerHTML == 'English to Morse'){
-    toggleButton.innerHTML = 'Morse to English'
+    toggleButton.innerHTML = 'Morse to English';
   }else{
-    toggleButton.innerHTML = 'English to Morse'
+    toggleButton.innerHTML = 'English to Morse';
   }
 }
