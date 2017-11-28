@@ -9,23 +9,34 @@
     <link rel="stylesheet" type="text/css" href="../styles.css"> <!-- importing css -->
     <script type="text/javascript" src="morseCodeTranslator.js"></script>
   </head>
+  
   <body>
     <div class="header">
       <h1>Morse Code Translator</h1>
     </div>
+    
     <!-- All content below the header -->
     <div class="content">
       <div class="buttons"><button class="button" onclick="window.open('../index.html','_self');">Home</button></div>
       <div class="morseTranslator" style="margin-top:5vh;">
-        <p>Please only use letters and spaces.<br/>Untranslated Characters removed from message</p>
-        <input type="text" name="Text: " class="textInput" autofocus id="textInput"><br/>
-        <div class="buttons">
-         <button type="button" style="margin-top:2vh;" onclick="run();" id="runButton" class="button">Convert</button>
-         <button type="button" style="margin-top:2vh;" onclick="toggleMode();" id="toggleButton" class="button">English to Morse</button>
-       </div>
-        <p class="textOutput" id="textOutput"></p>
+        
+        <p>Please only use letters and spaces.<br/>
+        Untranslated Characters removed from message</p>
+        
+        <input type="text" name="Text: " class="textInput" autofocus id="textInput">
+        <p>
+          <div class="buttons">
+
+            <button type="button" style="margin-top:2vh;" onclick="run();" id="runButton" class="button">Convert</button>
+            <button type="button" style="margin-top:2vh;" onclick="toggleMode();" id="toggleButton" class="button">English to Morse</button>
+
+          </div>
+        </p>
+      
+       <div class="seperatorLine"></div>
+       <p class="textOutput" id="textOutput"></p>
       </div>
-      <div class="seperatorLine"></div>
+      
     </div>
   </body>
 </html>
