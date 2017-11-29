@@ -1,4 +1,4 @@
-function main(){
+function run(){
   var text = document.getElementById('textInput').value;
   var toggleButtonState = document.getElementById('toggleButton').innerHTML;
   var textArray = [];
