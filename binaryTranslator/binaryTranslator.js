@@ -29,6 +29,6 @@ function asciiToBinary(inputArray){
   return(binaryArray.join(''))
 }
 
-function main(){
+function run(){
   document.getElementById('textOutput').innerHTML = asciiToBinary(textToAscii(document.getElementById('textInput').value));
 }
