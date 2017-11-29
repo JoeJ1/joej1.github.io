@@ -81,3 +81,7 @@ div.seperatorLine{
   border-bottom: 0.5em solid #004c40;
   margin-bottom: 0.5em;
 }
+
+.textOutput{
+  word-wrap: break-word;
+}

@@ -7,12 +7,12 @@
     <meta charset="UTF-8">
     <meta name="theme-color" content="#00796b">
     <link rel="stylesheet" type="text/css" href="../styles.css"> <!-- importing css -->
-    <script type="text/javascript" src="morseCodeTranslator.js"></script>
+    <script type="text/javascript" src="binaryTranslator.js"></script>
   </head>
 
   <body>
     <div class="header">
-      <h1>Morse Code Translator</h1>
+      <h1>Binary Translator</h1>
     </div>
 
     <!-- All content below the header -->
@@ -20,15 +20,14 @@
       <div class="buttons"><button class="button" onclick="window.open('../index.html','_self');">Home</button></div>
       <div class="morseTranslator" style="margin-top:5vh;">
 
-        <p>Please only use letters and spaces.<br/>
-        Untranslated Characters removed from message</p>
+        <p>This script converts english to ascii, then to 8 bit binary.<br/>
+           Please do not use any other charachter set or any charachter with a ascii value less than 32 or more than 126</p>
 
         <input type="text" name="Text: " class="textInput" autofocus id="textInput">
         <p>
           <div class="buttons">
 
             <button type="button" style="margin-top:2vh;" onclick="main();" id="runButton" class="button">Convert</button>
-            <button type="button" style="margin-top:2vh;" onclick="toggleMode();" id="toggleButton" class="button">English to Morse</button>
 
           </div>
         </p>
