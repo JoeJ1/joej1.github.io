@@ -61,7 +61,7 @@ function toggleMode(){
 }
 
 function run(){
-  if(document.getElementById('toggleButton').innerHTMl = "English to Binary"){
+  if(document.getElementById('toggleButton').innerHTMl == "English to Binary"){
     document.getElementById('textOutput').innerHTML = asciiToBinary(textToAscii(document.getElementById('textInput').value));
   }else{
     document.getElementById('textOutput').innerHTMl = asciiToText(binaryToAscii(document.getElementById('textInput').value));
