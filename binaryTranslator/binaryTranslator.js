@@ -38,7 +38,7 @@ function binaryToAscii(input){ //input must be string of 8 bit binary
     for(j = 7;j>0;j--){
       currentVal += parseInt(inputArray[i][j]);
     }
-    outputArray[i].push(currentVal);
+    outputArray.push(currentVal);
   }
   return(outputArray)
 }
