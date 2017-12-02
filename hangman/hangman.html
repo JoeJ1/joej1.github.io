@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JoeJ1 (personal projects)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- setting witdth to be variable (for different sized screens) -->
+    <meta name="description" content="A site for my simple personal projects ">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#00796b">
+    <link rel="stylesheet" type="text/css" href="../styles.css"> <!-- importing css -->
+    <script type="text/javascript" src="hangman.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Hangman Game</h1>
+    </div>
+
+    <!-- All content below the header -->
+    <div class="content">
+      <div class="buttons"><button class="button" onclick="window.open('../index.html','_self');">Home</button></div>
+      <div class="morseTranslator" style="margin-top:5vh;">
+        <img src="6.svg" width=15% height=15% id="hangmanDisplay"></img>
+        <h2 class="wordDisplay" id="wordDisplay">H A N G M A N</h2>
+        <p><button type="button" style="margin-top:2vh;" onclick="newGame();" id="newGameButton" class="button">New Game</button></p>
+          <div class="letterButtons">
+            <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="A">A</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="B">B</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="C">C</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="D">D</button>
+            <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="E">E</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="F">F</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="G">G</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="H">H</button>
+            <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="I">I</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="J">J</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="K">K</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="L">L</button>
+            <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="M">M</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="N">N</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="O">O</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="P">P</button>
+            <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="Q">Q</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="R">R</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="S">S</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="T">T</button>
+            <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="U">U</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="V">V</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="W">W</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="X">X</button>
+            <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="Y">Y</button> <button class="letterButton" onclick="letterChoice(this.innerHTML);" style="display:none;" id="Z">Z</button>
+          </div>
+       <p class="textOutput" id="textOutput"></p>
+      </div>
+      <div class="seperatorLine"></div>
+    </div>
+  </body>
+</html>
