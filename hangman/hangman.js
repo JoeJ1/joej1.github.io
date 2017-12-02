@@ -2,13 +2,11 @@ var text = "aardvark abyssinian accelerator accordion account accountant acknowl
 //words list from https://github.com/psobko/Common-English-Nouns
 
 text = text.split(' ')
-var globVar = 1;
 var word = "";
 var level = 0;
 
 
 function newGame(){
-  globVar = 43;
   document.getElementById('hangmanDisplay').src="0.svg";
   word = text[Math.floor((Math.random() * text.length))];
   console.log(word);
@@ -44,6 +42,7 @@ function letterChoice(letter){
     }
   }
   if(underscores == 0){
+    level=0;
     alert('You win!')
     letters = document.getElementsByClassName('letterButton')
     for(i = 0;i<letters.length;i++){
@@ -52,6 +51,7 @@ function letterChoice(letter){
     document.getElementById('newGameButton').style = 'display: inline-block;margin-top:2vh;'
   }
   if(level == 6){
+    level=0;
     alert('You lose, the word was '+word)
     for(i = 0;i<wordDisplay.length;i++){
       wordDisplay[i] = wordArray[i]
