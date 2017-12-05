@@ -18,7 +18,15 @@
     <!-- All content below the header -->
     <div class="content">
       <div class="buttons"><button class="button" onclick="window.open('../index.html','_self');">Home</button></div>
-      <div class="morseTranslator" style="margin-top:5vh;">
+      <div class="hangman" style="margin-top:5vh;">
+        <p>words choice: </p>
+        <form>
+          <input type="radio" name="wordChoice" checked oninput="radioUpdate()" class="wordChoiceRadio" id="randomNouns">Random Nouns</input>
+          <input type="radio" name="wordChoice" oninput="radioUpdate()" class="wordChoiceRadio" id="food">Food</input>
+          <input type="radio" name="wordChoice" oninput="radioUpdate()" class="wordChoiceRadio" id="sports">Sports</input>
+          <input type="radio" name="wordChoice" oninput="radioUpdate()" class="wordChoiceRadio" id="science">Science</input>
+          <input type="radio" name="wordChoice" oninput="radioUpdate()" class="wordChoiceRadio" id="technology">Technology</input>
+        </form>
         <img class="hangmanImage"src="6.svg" id="hangmanDisplay"></img>
         <h2 class="wordDisplay" id="wordDisplay">H A N G M A N</h2>
         <p><button type="button" style="margin-top:2vh;" onclick="newGame();" id="newGameButton" class="button">New Game</button></p>
