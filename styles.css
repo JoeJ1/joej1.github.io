@@ -75,7 +75,7 @@ div.seperatorLine{
 
 
 .button{
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.5s;
   border: none;
   color: #ffffff;
   display: inline-block;
@@ -83,12 +83,13 @@ div.seperatorLine{
   margin: 1em 1em 0em;
   margin-bottom: 1em;
   background-color: #00796b;
-  box-shadow: 0px 1px 5px 2px #888888;
+  box-shadow: 0px 1px 5px 1px #9e9e9e;
 }
 
 .button:hover{
-  transition: box-shadow 0.2s;
-  box-shadow: 0px 5px 15px 6px #9e9e9e;
+  transition: box-shadow 0.3s;
+  box-shadow: 0px 5px 15px 2px #bdbdbd;
+  cursor: pointer;
 }
 
 .textOutput{
@@ -101,7 +102,7 @@ div.seperatorLine{
 }
 
 .letterButtons{
-
+  cursor: default;
   border: none;
   display: inline-block;
   padding: 0;
@@ -124,4 +125,7 @@ div.seperatorLine{
 .letterButton:hover{
   background-color: #00665a;
   box-shadow: 0px 1px 8px 2px #9e9e9e;
+  cursor: pointer;
 }
+
+
