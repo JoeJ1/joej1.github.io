@@ -41,7 +41,7 @@ function radioUpdate(){
 
 function newGame(){
   radioUpdate();
-  document.getElementById('hangmanDisplay').src="0.svg";
+  document.getElementById('hangmanDisplay').src="0.png";
   word = text[Math.floor((Math.random() * text.length))];
   console.log(word);
   document.getElementById('wordDisplay').innerHTML = "_ ".repeat(word.length);
@@ -68,7 +68,7 @@ function letterChoice(letter){
   wordDisplay = wordDisplay.join(' ');
   document.getElementById('wordDisplay').innerHTML = wordDisplay;
   document.getElementById(letter).style = 'display: none;'
-  document.getElementById('hangmanDisplay').src=(""+level+".svg").toString();
+  document.getElementById('hangmanDisplay').src=(""+level+".png").toString();
   var underscores = 0;
   for(i = 0;i<wordDisplay.length;i++){
     if(wordDisplay[i] == "_"){
