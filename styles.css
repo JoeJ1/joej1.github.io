@@ -1,9 +1,9 @@
 *{
-  font: helvetica;
+  font-family: helvetica;
   font-size: 1em;
 }
+
 html, body{
-  font: helvetica;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
@@ -11,7 +11,7 @@ html, body{
   width: 100%;
 }
 
-div.header{
+.header{
   width: inherit;
   position: fixed;
   text-align: center;
@@ -21,8 +21,7 @@ div.header{
   border-bottom: 0.5em solid #004c40;
 }
 
-div.header h1{
-  font: helvetica;
+.header h1{
   color: #ffffff;
 }
 
