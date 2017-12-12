@@ -4,11 +4,13 @@
 }
 
 html, body{
+  font-weight: lighter;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
   text-align: center;
   width: 100%;
+  font-size: 100%;
 }
 
 .header{
@@ -27,10 +29,11 @@ html, body{
 
 /*All the content in the page below the header*/
 div.content{
+  padding: 0;
   padding-top: 7.5em;
   background-color: #ffffff;
   margin: 0;
-  width: 75%;
+  width: 100%;
   display: inline-block;
   text-align: center;
   font-size: 1.25em;
@@ -74,7 +77,12 @@ div.seperatorLine{
 
 
 .button{
-  transition: box-shadow 0.5s;
+  transition: box-shadow, background-color 0.2s;
+  letter-spacing: 0;
+  font-weight: lighter;
+  border-radius: 2.5px;
+  font-size: 0.9em;
+  text-decoration: none;
   border: none;
   color: #ffffff;
   display: inline-block;
@@ -86,9 +94,15 @@ div.seperatorLine{
 }
 
 .button:hover{
-  transition: box-shadow 0.3s;
-  box-shadow: 0px 5px 15px 2px #bdbdbd;
+  transition: box-shadow, background-color 0.3s;
+  background-color: #008071;
+  box-shadow: 0px 2px 7px 1px #bdbdbd;
   cursor: pointer;
+}
+
+.button:active{
+  transition: background-color 0.25s;
+  background-color: #00e6cb;
 }
 
 .textOutput{
@@ -126,5 +140,3 @@ div.seperatorLine{
   box-shadow: 0px 1px 8px 2px #9e9e9e;
   cursor: pointer;
 }
-
-
