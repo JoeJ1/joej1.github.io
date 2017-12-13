@@ -7,9 +7,18 @@
     <meta charset="UTF-8">
     <meta name="theme-color" content="#00796b">
     <link rel="stylesheet" type="text/css" href="styles.css"> <!-- importing css -->
+    <script src="main.js"></script>
   </head>
   <body>
-    <div class="header">
+    <div class="buttons sidebar" > <!-- style="display:none;"-->
+      <button class="sidebarButton" onclick="window.open('index.html','_self')">Home</button>
+      <button class="sidebarButton" onclick="window.open('gameOfPig/gameOfPig.html','_self')">Game of Pig</button>
+      <button class="sidebarButton" onclick="window.open('binaryTranslator/binaryTranslator.html','_self')">Binary Translator</button>
+      <button class="sidebarButton" onclick="window.open('morseCodeTranslator/morseCodeTranslator.html','_self')">Morse Code Translator</button>
+      <button class="sidebarButton" onclick="window.open('noughtsAndCrosses/noughtsAndCrosses.html','_self')">Noughts and Crosses</button>
+      <button class="sidebarButton" onclick="window.open('hangman/hangman.html','_self')">Hangman</button>
+    </div>
+    <div class="header" onclick="toggleSidebar()">
       <h1>
       JoeJ1's Personal Projects.
       </h1>
@@ -20,13 +29,6 @@
         This is a site for my very simple web design projects<br/>
         You can see my GitHub page <a href="https://github.com/JoeJ1">here</a>.
       </p>
-      <div class="buttons">
-        <button class="button" onclick="window.open('gameOfPig/gameOfPig.html','_self')">Game of Pig</button>
-        <button class="button" onclick="window.open('binaryTranslator/binaryTranslator.html','_self')">Binary Translator</button>
-        <button class="button" onclick="window.open('morseCodeTranslator/morseCodeTranslator.html','_self')">Morse Code Translator</button>
-        <button class="button" onclick="window.open('noughtsAndCrosses/noughtsAndCrosses.html','_self')">Noughts and Crosses</button>
-        <button class="button" onclick="window.open('hangman/hangman.html','_self')">Hangman</button>
-      </div>
       <!-- A centred lightly shaded line-->
       <div class="seperatorLine"></div>
     </div>

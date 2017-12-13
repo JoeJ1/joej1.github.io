@@ -13,7 +13,7 @@ html, body{
 }
 
 .header{
-  width: inherit;
+  width: 100%;
   position: fixed;
   text-align: center;
   padding: 1em;
@@ -60,6 +60,7 @@ button.noughtsAndCrossesSquare{
 }
 
 div.seperatorLine{
+  margin-top: 0.75em;
   margin-bottom: 0.75em;
   display: inline-block;
   width: 60%;
@@ -98,6 +99,41 @@ div.seperatorLine{
   box-shadow: 0px 2px 7px 1px #bdbdbd;
   cursor: pointer;
 }
+
+.sidebarButton{
+  transition: box-shadow, background-color 0.2s;
+  width: 245px;
+  height: 60px;
+  letter-spacing: 0;
+  font-weight: lighter;
+  border-radius: 2.5px;
+  font-size: 1em;
+  text-decoration: none;
+  border: none;
+  color: #ffffff;
+  display: block;
+  margin: 0.4em 0.1em 0em;
+  background-color: #00796b;
+  text-align: left;
+  padding-left: 2em;
+}
+
+.sidebarButton:hover{
+  transition: box-shadow, background-color 0.3s;
+  background-color: #008071;
+  box-shadow: 0px 1px 3px 0.01px #000000;
+  cursor: pointer;
+}
+
+.sidebar{
+  background-color: #00796b;
+  padding-top: 15vh;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  display: block;
+}
+
 
 .button:active{
   transition: background-color 0.25s;
