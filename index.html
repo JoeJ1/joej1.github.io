@@ -10,18 +10,18 @@
     <script src="main.js"></script>
   </head>
   <body>
-    <div class="buttons sidebar" > <!-- style="display:none;"-->
+    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px'">
+      <h1>
+      JoeJ1's Personal Projects.
+      </h1>
+    </div>
+    <div class="buttons sidebar" onclick="this.style.width='0px'"> <!-- style="display:none;"-->
       <button class="sidebarButton" onclick="window.open('index.html','_self')">Home</button>
       <button class="sidebarButton" onclick="window.open('gameOfPig/gameOfPig.html','_self')">Game of Pig</button>
       <button class="sidebarButton" onclick="window.open('binaryTranslator/binaryTranslator.html','_self')">Binary Translator</button>
       <button class="sidebarButton" onclick="window.open('morseCodeTranslator/morseCodeTranslator.html','_self')">Morse Code Translator</button>
       <button class="sidebarButton" onclick="window.open('noughtsAndCrosses/noughtsAndCrosses.html','_self')">Noughts and Crosses</button>
       <button class="sidebarButton" onclick="window.open('hangman/hangman.html','_self')">Hangman</button>
-    </div>
-    <div class="header" onclick="toggleSidebar()">
-      <h1>
-      JoeJ1's Personal Projects.
-      </h1>
     </div>
     <!-- All content below the header -->
     <div class="content">
