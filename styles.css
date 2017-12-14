@@ -103,6 +103,9 @@ div.seperatorLine{
 
 .sidebarButton{
   transition: box-shadow, background-color 0.2s;
+  transition: width 0.5s;
+  overflow: hidden;
+  white-space: nowrap;
   width: 245px;
   height: 60px;
   letter-spacing: 0;
@@ -116,7 +119,7 @@ div.seperatorLine{
   margin: 0.4em 0.1em 0em;
   background-color: #00796b;
   text-align: left;
-  padding-left: 2em;
+  padding-left: 0;
 }
 
 .sidebarButton:hover{

@@ -8,14 +8,21 @@
     <meta name="theme-color" content="#00796b">
     <link rel="stylesheet" type="text/css" href="../styles.css"> <!-- importing css -->
     <script type="text/javascript" src="noughtsAndCrosses.js"></script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    <script>
+      $(function(){
+        $("#includedContent").load("../sidebar.html");
+      });
+    </script>
   </head>
   <body>
     <div class="header">
       <h1>Noughts and Crosses / Tic-Tac-Toe</h1>
     </div>
+    <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
     <!-- All content below the header -->
     <div class="content">
-      <div class="buttons"><button class="button" onclick="window.open('../index.html','_self');">Home</button></div>
       <div class="noughtsAndCrosses">
       <p>Currently the oppenent simply randomises which position it chooses, in the future I plan to change it to make it more difficult and interesting.</p>
       <div class="seperatorLine"></div>
