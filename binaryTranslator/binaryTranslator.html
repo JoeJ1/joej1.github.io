@@ -8,16 +8,22 @@
     <meta name="theme-color" content="#00796b">
     <link rel="stylesheet" type="text/css" href="../styles.css"> <!-- importing css -->
     <script type="text/javascript" src="binaryTranslator.js"></script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    <script>
+      $(function(){
+        $("#includedContent").load("../sidebar.html");
+      });
+    </script>
   </head>
 
   <body>
     <div class="header">
       <h1>Binary (ASCII) Translator</h1>
     </div>
-
+    <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
     <!-- All content below the header -->
     <div class="content">
-      <div class="buttons"><button class="button" onclick="window.open('../index.html','_self');">Home</button></div>
       <div class="binaryTranslator" style="margin-top:5vh;">
 
         <p>This script converts english to ASCII, then to 8 bit binary.<br/>
