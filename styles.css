@@ -95,14 +95,14 @@ div.seperatorLine{
 }
 
 .button:hover{
-  transition: box-shadow, background-color 0.3s;
+  transition: box-shadow 0.3s, background-color 0.3s;
   background-color: #008071;
   box-shadow: 0px 2px 7px 1px #bdbdbd;
   cursor: pointer;
 }
 
 .sidebarButton{
-  transition: box-shadow, background-color 0.2s;
+  transition: box-shadow 0.2s, background-color 0.2s;
   transition: width 0.5s;
   overflow: hidden;
   white-space: nowrap;
