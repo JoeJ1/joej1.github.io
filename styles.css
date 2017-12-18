@@ -102,8 +102,9 @@ div.seperatorLine{
 }
 
 .sidebarButton{
-  transition: box-shadow 0.2s, background-color 0.2s;
-  transition: width 0.5s;
+  transition: box-shadow 0.2s, background-color 0.2s, left 0.5s, width 0.5s;
+  position: relative;
+  left: 0px;
   overflow: hidden;
   white-space: nowrap;
   width: 245px;
