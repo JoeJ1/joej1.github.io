@@ -1,5 +1,5 @@
 function roll(){
-  var diceRoll = Math.floor(Math.random()*(6-1+1)+1);
+  var diceRoll = Math.floor(Math.random()*(6)+1);
   document.getElementById('diceImage').src = diceRoll+".png"
   if(diceRoll == 1){
     document.getElementById('thisRoundScore').innerHTML = 0;

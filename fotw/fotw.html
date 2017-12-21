@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JoeJ1 (personal projects)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- setting witdth to be variable (for different sized screens) -->
+    <meta name="description" content="A site for my simple personal projects ">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#00796b">
+    <link rel="stylesheet" type="text/css" href="../styles.css"> <!-- importing css -->
+    <script type="text/javascript" src="fotw.js"></script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    <script>
+      $(function(){
+        $("#includedContent").load("../sidebar.html");
+      });
+    </script>
+  </head>
+  <body onload="fotw()">
+    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
+      <img src="../ic_menu_white_24px.svg" class="menuIcon icon">
+      <h1>Flags Of The World</h1>
+    </div>
+    <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
+    <!-- All content below the header -->
+    <div class="content">
+      <img src="" id="fotwImage" class="fotwImage">
+      <p id="pointsIndicator">points: 0</p>
+      <p id="answerIndicator">&nbsp;</p>
+      <p>Which country's flag is this? </p>
+      <div class="buttons" id="flagChoiceButtons">
+        <button class="button flagChoiceButton" id="flagChoiceButton1" onclick="fotwButtonPress(1)"></button>
+        <button class="button flagChoiceButton" id="flagChoiceButton2" onclick="fotwButtonPress(2)"></button>
+        <button class="button flagChoiceButton" id="flagChoiceButton3" onclick="fotwButtonPress(3)"></button>
+        <button class="button flagChoiceButton" id="flagChoiceButton4" onclick="fotwButtonPress(4)"></button>
+      </div>
+    </div>
+  </body>
+</html>
