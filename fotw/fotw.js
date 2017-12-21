@@ -522,7 +522,7 @@ function fotwButtonPress(calledId){
   if(Number(calledId)-1 == correctButtonChoice){
     document.getElementById('answerIndicator').style.color = "#00cc00";
     document.getElementById('answerIndicator').innerHTML = "Correct!";
-    points = points +1;
+    points = points +2;
     document.getElementById('pointsIndicator').innerHTML = "points: "+points;
     fotw()
   }else{
