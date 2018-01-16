@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JoeJ1 (personal projects)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- setting witdth to be variable (for different sized screens) -->
+    <meta name="description" content="A site for my simple personal projects ">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#00796b">
+    <link rel="stylesheet" type="text/css" href="../styles.css"> <!-- importing css -->
+    <script type="text/javascript" src="hangman.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../main.js"></script>
+    <script src="onePassStandardDeviation.js">
+    <script>
+      $(function(){
+        $("#includedContent").load("../sidebar.html");
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
+      <img src="../ic_menu_white_24px.svg" class="menuIcon icon">
+      <h1>One-Pass Calculator</h1>
+    </div>
+    <div class="buttons sidebar" id="includedContent" onclick="this.style.width='0px';hideSidebarButtons();"></div>
+    <!-- All content below the header -->
+      <div class="content">
+        <p>Calculates the standard deviation of a set of numbers using the One-Pass method.</p>
+        <p>Enter your set of numbers into the text field below, seperate each value with a comma. Spaces don't matter</p>
+        <p>e.g. 3,9,&nbsp;&nbsp;10, 8, 24, 3,1, 20    would be a valid input.</p>
+        <input type="text" class="textInput" autofocus id="textInput"></input>
+        <div class="buttons">
+          <button type="button" style="margin-top:2vh;" onclick="onePass()" id="newGameButton" class="button">Calculate</button>
+        <div class="buttons">
+        <p class="textOutput" id="textOutputOnePass"></p>
+      </div>
+      <div class="seperatorLine"></div>
+    </div>
+  </body>
+</html>
