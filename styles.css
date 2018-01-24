@@ -192,8 +192,8 @@ button:focus {
 }
 
 .closeIcon{
-	padding-right: 10px;
-	padding-top: 5px;
+  padding-right: 10px;
+  padding-top: 5px;
   position: fixed;
   left: 226px;
   top: 5px;
@@ -202,16 +202,16 @@ button:focus {
 }
 
 .menuIcon{
-	padding-right: 5px;
-	padding-top: 5px;
-	position: fixed;
-	left: 10px;
-	top: 5px;
-	transition: left 0.5s;
+  padding-right: 5px;
+  padding-top: 5px;
+  position: fixed;
+  left: 10px;
+  top: 5px;
+  transition: left 0.5s;
 }
 
 .icon:hover{
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .fotwImage{
