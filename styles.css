@@ -151,10 +151,9 @@ button:focus {
   overflow: hidden;
 }
 
-.sidebarInternal:
+.sidebarInternal{
   overflow-y: scroll;
-
-
+}
 
 .button:active{
   transition: background-color 0.25s;
