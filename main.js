@@ -11,5 +11,5 @@ function showSidebarButtons(){
   for(i=0;i<sidebarButtons.length;i++){
 	  sidebarButtons[i].style.left = "0px"
   }
-  document.getElementsByClassName('closeIcon')[0].style.left="212px";
+  document.getElementsByClassName('closeIcon')[0].style.left="226px";
 }
