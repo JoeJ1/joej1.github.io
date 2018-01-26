@@ -26,7 +26,11 @@
     <div class="content">
       <p>An attempt at random image generation, similar to that of Github's randomly generated profile pictures (hopefully)</p>
       <canvas id="githubImageCanvas" width=500px height=500px></canvas>
-      <div class="buttons"><button class="button" onclick="displayImage(document.getElementById('input').value);">Generate</button></div>
+      <div class="buttons">
+        <button class="button" onclick="displayImage(document.getElementById('input').value);">Generate 1</button>
+        <button class="button" onclick="interval = setInterval(function(){displayImage(document.getElementById('input').value)},500)">Generate Multiple</button>
+        <button class="button" onclick="clearInterval(interval)">Stop Generating</button>
+      </div>
       <p id="inputDisplay"></p>
       <input type="range" step="1" min="3" max="13" id="input" oninput="showVal();" value="5"></input>
     </div>
