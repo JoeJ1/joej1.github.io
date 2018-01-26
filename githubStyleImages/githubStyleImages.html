@@ -28,8 +28,7 @@
       <canvas id="githubImageCanvas" width=500px height=500px></canvas>
       <div class="buttons">
         <button class="button" onclick="displayImage(document.getElementById('input').value);">Generate 1</button>
-        <button class="button" onclick="interval = setInterval(function(){displayImage(document.getElementById('input').value)},500)">Generate Multiple</button>
-        <button class="button" onclick="clearInterval(interval)">Stop Generating</button>
+        <button class="button" onclick="toggleQuickGen(this)" id="quickGenButton">Quick Generate</button>
       </div>
       <p id="inputDisplay"></p>
       <input type="range" step="1" min="3" max="13" id="input" oninput="showVal();" value="5"></input>

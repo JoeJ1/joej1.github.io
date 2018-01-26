@@ -21,7 +21,6 @@ function generateImage(width){
   }
   //Making sure the picture isn't too full or too empty
   if(cells<3 || cells>(width*(width/2))){image = generateImage(width)}
-  console.log(cells)
   return(image);
 }
 
@@ -47,4 +46,16 @@ function displayImage(width){
 function showVal(){
   //Showing the slider's value
   document.getElementById('inputDisplay').innerHTML = "size: "+document.getElementById('input').value
+}
+
+function toggleQuickGen(toggleButton){
+  if(toggleButton.innerHTML == 'Quick Generate'){
+    interval = setInterval(function(){displayImage(document.getElementById('input').value)},350);
+    toggleButton.state = 'on';
+    toggleButton.innerHTML = 'Stop Generating'
+  }else{
+    clearInterval(interval);
+    toggleButton.state = 'off';
+    toggleButton.innerHTML = 'Quick Generate'
+  }
 }
