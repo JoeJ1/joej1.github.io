@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JoeJ1 (personal projects)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- setting witdth to be variable (for different sized screens) -->
+    <meta name="description" content="A site for my simple personal projects ">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#00796b">
+    <link rel="stylesheet" type="text/css" href="../styles.css"> <!-- importing css -->
+    <script type="text/javascript" src="mazeGen.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../main.js"></script>
+    <script>
+      $(function(){
+        $("#includedContent").load("../sidebar.html");
+      });
+    </script>
+  </head>
+  <body onload="displayImage();">
+    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
+      <img src="../ic_menu_white_24px.svg" class="menuIcon icon">
+      <h1>Randomised maze generator</h1>
+    </div>
+    <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
+    <!-- All content below the header -->
+    <div class="content">
+      <p>Randomly generated mazes using randomised "Prim's Algorithm"<br/>More information on algorithm <a href="https://en.wikipedia.org/wiki/Maze_generation_algorithm#Randomized_Prim.27s_algorithm">here</a></p>
+      <canvas id="mazeGenerationCanvas"></canvas>
+      <div class="buttons">
+        <button class="button" onclick="displayImage();">Generate 1</button>
+        <button class="button" onclick="toggleQuickGen(this)" id="quickGenButton">Quick Generate</button>
+      </div>
+    </div>
+  </body>
+</html>
