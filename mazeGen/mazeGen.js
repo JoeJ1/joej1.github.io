@@ -119,6 +119,15 @@ function setup(){
   }
 }
 
+function draw(){
+  if(mouseIsPressed){
+    stroke(255,0,0)
+    line(pmouseX,pmouseY,mouseX,mouseY)
+  }
+}
+
+
+
 function cell(i, j, cellWidth, cols, rows){
   this.i = i; // position in maze array
   this.j = j;
