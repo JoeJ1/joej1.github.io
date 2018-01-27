@@ -38,6 +38,11 @@ function displayImage(width){
       if(image[i][j] == 1){
         //Placing coloured cell in corresponding spot if a 1 is there
         ctx.fillRect(j*(500/width),i*(500/width),500/width+1,500/width+1)
+        //For Circles uncomment below and comment above
+        /*ctx.beginPath();
+        //ctx.arc(j*(500/width)+(500/width)/2,i*(500/width)+(500/width)/2,(500/width)/2,0,2*Math.PI);
+        //ctx.fill();*/
+
       }
     }
   }
@@ -50,7 +55,7 @@ function showVal(){
 
 function toggleQuickGen(toggleButton){
   if(toggleButton.innerHTML == 'Quick Generate'){
-    interval = setInterval(function(){displayImage(document.getElementById('input').value)},350);
+    interval = setInterval(function(){displayImage(document.getElementById('input').value)},100);
     toggleButton.state = 'on';
     toggleButton.innerHTML = 'Stop Generating'
   }else{
