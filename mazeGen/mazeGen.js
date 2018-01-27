@@ -131,7 +131,7 @@ function draw(){
 function cell(i, j, cellWidth, cols, rows){
   this.i = i; // position in maze array
   this.j = j;
-  this.topWall={state: 1, parent: this, type: 'top'} // 1 means wall exists 0 means wall doesn't exist
+  this.topWall={state: 1, parent: this, type: 'top'} // state of 1 means wall exists 0 means wall doesn't exist
   this.rightWall={state: 1, parent: this, type: 'right'}
   this.leftWall={state: 1, parent: this, type: 'left'}
   this.bottomWall={state: 1, parent: this, type: 'bottom'}
