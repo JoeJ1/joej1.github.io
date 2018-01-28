@@ -90,16 +90,3 @@ function draw(){
     }
   }
 }
-
-
-function togglePlayPause(button){
-  if(button.innerHTML == 'Play'){
-    paused = false;
-    button.innerHTML = 'Pause';
-    document.getElementById('clearButton').style.display = 'none';
-  }else{
-    paused = true;
-    button.innerHTML = 'Play';
-    document.getElementById('clearButton').style.display = 'inline-block;';
-  }
-}
