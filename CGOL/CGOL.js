@@ -9,7 +9,7 @@ let rows;
 function setup(){
   cells = [];
   cellWidth = 5;
-  var canvas = createCanvas(window.innerWidth,window.innerWidth/4);
+  var canvas = createCanvas(window.innerWidth,window.innerHeight*0.6);
   cols = floor(width/cellWidth);
   rows = floor(height/cellWidth);
   canvas = createCanvas(cols*cellWidth,rows*cellWidth)
