@@ -12,6 +12,7 @@ let iterationsPerFrame = 200;
 
 
 function setup(){
+  cells = [];
   antDir = 0;
   var canvas = createCanvas(window.innerWidth*0.7,window.innerHeight*0.6);
   canvas.parent('canvasContainer');
