@@ -1,7 +1,6 @@
 //Maze generation with prim's algorithm
 //27/01/18
 
-var paused = true;
 let cells = [];
 let cellWidth;
 let cols;

@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://github.com/processing/p5.js/releases/download/0.6.0/p5.min.js"></script>
     <script src="../main.js"></script>
-    <script type="text/javascript" src="CGOL.js"></script>
+    <script type="text/javascript" src="langtonsAnt.js"></script>
     <script>
       $(function(){
         $("#includedContent").load("../sidebar.html");
@@ -20,13 +20,14 @@
   <body onload="">
     <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
       <img src="../ic_menu_white_24px.svg" class="menuIcon icon">
-      <h1>Conway's Game of Life</h1>
+      <h1>Langton's Ant</h1>
     </div>
     <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
     <!-- All content below the header -->
     <div class="content">
       <h2>Created: 28th Jan, 2018</h2>
-      <p>An implementation of Conway's Game Of life.<br/>More information <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">here</a>.</p>
+      <p>An implementation of Langton's Ant.<br/>More information <a href="https://en.wikipedia.org/wiki/Langton's_ant">here</a>.<br/>
+         This implimentation is running at 200 iterations per frame.</p>
       <div class="buttons">
         <button class="button" onclick="setup();">Reset</button>
       </div>
