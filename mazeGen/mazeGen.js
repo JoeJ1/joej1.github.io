@@ -120,10 +120,7 @@ function setup(){
 }
 
 function draw(){
-  if(mouseIsPressed){
-    stroke(255,0,0)
-    line(pmouseX,pmouseY,mouseX,mouseY)
-  }
+
 }
 
 
@@ -153,8 +150,18 @@ function cell(i, j, cellWidth, cols, rows){
     // Bottom wall
     stroke(255,255,255,this.bottomWall.state*255);
     line(x,y+cellWidth,x+cellWidth,y+cellWidth)
+    if(i == rows-1 && j == cols-1){
+        fill(0,255,0)
+        noStroke()
+        rect(x+1,y+1,cellWidth-1,cellWidth-1);
+        console.log('yup')
+    }
   }
 
+}
+
+function controller(i, j, cellwidth, cols, rows){
+  //Moved by keyboard through maze to finish
 }
 
 function showVal(){
