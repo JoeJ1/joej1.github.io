@@ -1,6 +1,9 @@
 //Maze generation with prim's algorithm
 //27/01/18
 
+controller = new controller();
+document.getElementsByTagName('body')[0].addEventListner('keydown',controller.move(event))
+
 function setup(){
   var cellWidth = int(document.getElementById('input').value); //Width of each cell
   console.log(cellWidth)
@@ -120,7 +123,7 @@ function setup(){
 }
 
 function draw(){
-
+  controller.update();
 }
 
 
@@ -160,8 +163,45 @@ function cell(i, j, cellWidth, cols, rows){
 
 }
 
-function controller(i, j, cellwidth, cols, rows){
-  //Moved by keyboard through maze to finish
+function controller(i, j, cellwidth, cols, rows, maze){
+  this.i = i;
+  this.j = j;
+  this.pI = this.i;
+  this.pJ = this.j;
+
+  this.move = function(key){
+    if(key.lower() == 'd' || key == 'ArrowRight'){
+      if(i<rows-1){
+        this.pI = this.i;
+        this.pJ = this.j;
+        this.i++;
+      }
+    }else if(key.lower() == 'a' || key == 'ArrowLeft'){
+      if(this.i>0){
+        this.pI = this.i;
+        this.pJ = this.j;
+        this.i--;
+      }
+    }else if(key.lower() == 's' || key == 'ArrowDown'){
+        if(this.j<cols-1){
+          this.pI = this.i;
+          this.pJ = this.j;
+          this.j++;
+        }
+    }else if(key.lower() == 'w' || key == 'ArrowUp'){
+      if(this.j>0){
+        this.pI = this.i;
+        this.pJ = this.j;
+        this.j++;
+      }
+    }
+  }
+  this.update = function(){
+    fill(60);
+    rect(this.pI*cellWidth,this.pJ*cellWidth,cellWidth,cellWidth);
+    fill(0,0,255);
+    rect(this.i*cellWidth,this.j*cellWidth,cellWidth,cellWidth);
+  }
 }
 
 function showVal(){
