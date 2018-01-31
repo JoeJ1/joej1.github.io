@@ -45,7 +45,7 @@ function draw(){
 				walkerY = height-1;
 			}
 		}
-		textSize(height/6);
+		textSize(width/15);
 		textAlign(CENTER);
 		text('With Perlin Noise',width/2,height/2);
 		fill(255)
@@ -69,7 +69,7 @@ function draw(){
 				walkerY = height-1;
 			}
 		}
-		textSize(height/6);
+		textSize(width/15);
 		textAlign(CENTER);
 		text('Completely Random',width/2,height/2);
 		fill(255)
@@ -97,7 +97,7 @@ function draw(){
 				walkerY = height-1;
 			}
 		}
-		textSize(height/6);
+		textSize(width/15);
 		textAlign(CENTER);
 		text('Floored Perlin Noise',width/2,height/2);
 		fill(255)
