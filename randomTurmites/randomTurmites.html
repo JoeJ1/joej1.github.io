@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JoeJ1 (personal projects)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- setting witdth to be variable (for different sized screens) -->
+    <meta name="description" content="A site for my simple personal projects ">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#00796b">
+    <link rel="stylesheet" type="text/css" href="../styles.css"> <!-- importing css -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://github.com/processing/p5.js/releases/download/0.6.0/p5.min.js"></script>
+    <script src="../main.js"></script>
+    <script type="text/javascript" src="randomTurmites.js"></script>
+    <script>
+      $(function(){
+        $("#includedContent").load("../sidebar.html");
+      });
+    </script>
+  </head>
+  <body onload="">
+    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
+      <img src="../ic_menu_white_24px.svg" class="menuIcon icon">
+      <h1>Langton's Ant</h1>
+    </div>
+    <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
+    <!-- All content below the header -->
+    <div class="content">
+      <h2>Created: 29th Jan, 2018</h2>
+      <p>Generates random turmites (2d turing machines).<br/>Will sometimes not show anything, just regenerate until it does.<br/>More information <a href="https://en.wikipedia.org/wiki/Turmite">here</a></p>
+      <div class="buttons">
+        <button class="button" onclick="setup();">Regenerate</button>
+      </div>
+      <div id="canvasContainer"></div>
+    </div>
+  </body>
+</html>
