@@ -150,3 +150,160 @@ function draw(){
     x,y = move()
   }
 }
+
+// Interesting Termites:
+/*
+  // Sorry for bad descriptions, It's hard to come up with unique names
+
+  // Large, chaotic Spiral (Example of what this notation means)
+  1,R,0,0,R,1 -> currentState0 = [[1, 'R', 0],[0, 'R', 1]];
+  0,N,0,1,N,1 -> currentState1 = [[0, 'N', 0],[1, 'N', 1]];
+
+  // Langton's Ant-Like
+  1,R,0,0,U,1
+  0,L,0,1,R,1
+
+  // Circularly eminating widely spaced white dots
+  0,N,1,1,N,0
+  1,L,0,1,R,1
+
+  // Spiral forming half-filled square (interesting after wrap)
+  0,N,1,0,R,0
+  1,U,1,0,L,0
+
+  // Expanding Square
+  1,L,0,1,U,1
+  0,R,1,1,L,0
+
+  // Chaotic with interesting patern
+  0,U,1,0,N,0
+  1,L,1,0,L,0
+
+  // Expanding cross with cross at 45 degreees in center
+  1,R,0,0,U,1
+  0,R,0,1,U,1
+
+  // Fills up screen left to white then interesting pattern
+  1,L,0,0,L,1
+  1,N,1,1,R,0
+
+  // Interestingly filled expanding square
+  0,L,1,0,R,0
+  1,R,1,1,L,0
+
+  // Expands in squares
+  1,U,0,0,L,1
+  1,R,1,1,N,0
+
+  // Very rare highways
+  1,U,0,0,L,1
+  1,N,0,0,L,1
+
+  // Builds in centre forming highways in both directions
+  0,L,0,0,N,1
+  1,R,1,1,R,0
+
+  // Chaotic growth
+  1,N,1,0,R,0
+  1,U,0,1,N,1
+
+  // Expanding Octagon
+  1,U,1,0,U,0
+  1,R,1,1,N,0
+
+  // Langton's ant-Like
+  1,R,0,1,R,1
+  1,L,1,0,U,0
+
+  // Chaotic Spiral
+  0,U,0,1,N,1
+  1,L,1,0,U,0
+
+  // Angled highway
+  1,N,1,0,L,0
+  1,R,1,1,L,0
+
+  // Expanding x-shape
+  1,R,0,0,L,1
+  1,N,1,0,R,0
+
+  // Tightly packed expanding Spiral
+  1,R,0,0,L,1
+  1,L,0,0,R,1
+
+  // Expanding diagonal square with interesting center pattern
+  1,R,1,0,U,0
+  1,N,0,0,L,1
+
+  // Rotated expanding x-shape
+  1,R,0,0,L,1
+  1,N,1,0,R,0
+
+  // Difficult to descibe
+  1,N,1,1,N,0
+  0,N,0,0,R,1
+
+  // Off-center square with diagonal highway
+  1,U,0,1,N,1
+  1,L,0,0,R,1
+
+  // Cross builds chaoticicaly in center
+  1,N,0,0,R,1
+  0,N,0,0,R,1
+
+  // Interesting highways
+  1,N,1,0,N,0
+  1,U,0,0,R,1
+
+  // Small Square chaotic growth
+  1,N,1,0,N,0
+  1,R,1,1,N,0
+
+  // Langton's ant-like
+  1,R,1,1,R,0
+  0,N,0,0,N,1
+
+  // Fractal-like chaotic generation
+  1,L,1,1,N,0
+  1,U,0,0,R,1
+
+  // Interesting expanding square
+  1,R,1,1,R,0
+  0,N,0,1,L,1
+
+  // Langton's Ant
+  1,R,0,0,L,1
+  1,R,0,0,L,1
+
+  // Interesting bouncing highways
+  1,N,1,0,R,0
+  1,R,0,0,U,1
+
+  // Spiral highways
+  1,L,0,1,L,1
+  0,N,1,0,N,0
+
+  // bouncing diagonal highways
+  1,L,1,0,L,0
+  1,N,0,0,U,1
+
+  // Wavy lines square
+  1,N,1,0,L,0
+  0,L,0,0,R,1
+
+  // Expanding Trapesium
+  0,U,1,0,U,0
+  1,N,0,1,R,1
+
+  // Thick highways
+  1,L,0,0,N,1
+  1,U,1,1,R,0
+
+  // Spiral
+  1,N,1,1,R,0
+  1,U,1,0,L,0
+
+  // Interesting opposing highways
+  1,R,1,1,N,0
+  1,L,1,0,R,0
+*/
