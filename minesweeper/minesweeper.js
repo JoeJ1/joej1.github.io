@@ -203,7 +203,7 @@ function update(){
       }
     }
   }
-  /*for(let x=0; x<cols; x++){ // Displaying overlay
+  for(let x=0; x<cols; x++){ // Displaying overlay
     for(let y=0; y<rows; y++){
       if(overlay[x][y] == 0){
         fill(170);
@@ -234,5 +234,5 @@ function update(){
     stroke(255,0,0);
     textSize(width/6);
     text("YOU WIN!!", width/2, height/2);
-  }*/
+  }
 }
