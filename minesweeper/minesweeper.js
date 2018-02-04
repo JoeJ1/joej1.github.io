@@ -98,7 +98,7 @@ function overlayZero(x, y) {
       }
     }
     if (x < cols - 1) {
-      if (overlay[x][y + 1] != 2) {
+      if (overlay[x + 1][y + 1] != 2) {
         overlay[x + 1][y + 1] = 2; // Bottom-Right/South-East cell
         if (cells[x + 1][y + 1] == 0) {
           overlayZero(x + 1, y + 1)
