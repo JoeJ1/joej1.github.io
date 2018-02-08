@@ -9,7 +9,7 @@ function setup(){
   cells = [];
   cellWidth = 5;
   var canvas = createCanvas(window.innerWidth,window.innerHeight*0.6);
-  cols = floor(width/cellWidth);
+  cols = floor(width/cellWidth); // Rounds the width and height of the window to the nearest cell width
   rows = floor(height/cellWidth);
   canvas = createCanvas(cols*cellWidth,rows*cellWidth)
   canvas.parent('canvasContainer');

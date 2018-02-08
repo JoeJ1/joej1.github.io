@@ -225,8 +225,8 @@ function update() {
     }
   }
   if (discoveredMines == minesAmount) {
-    fill(255, 0, 0);
-    stroke(255, 0, 0);
+    fill(0, 255, 0);
+    stroke(0, 255, 0);
     textSize(width / 6);
     text("YOU WIN!!", width / 2, height / 2);
   }
