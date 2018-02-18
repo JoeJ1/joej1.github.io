@@ -151,7 +151,7 @@ button:focus {
 
 
 .infoIcon{
-  position: fixed;
+  position: absolute;
   right: 34px;
   top: 1.2em;
   width: 2em;
@@ -159,7 +159,7 @@ button:focus {
 }
 
 .backIcon{
-  position: fixed;
+  position: absolute;
   left: 34px;
   top: 1.2em;
   width: 2em;
@@ -167,7 +167,7 @@ button:focus {
 }
 
 .closeIcon{
-  position: fixed;
+  position: absolute;
   display: none;
   right: 34px;
   top: 1.2em;
@@ -220,4 +220,5 @@ button:focus {
   margin: 0;
   margin-top: 1vw;
   border-radius: 0;
+  font-size: 2em;
 }
