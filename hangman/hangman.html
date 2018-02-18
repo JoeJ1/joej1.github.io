@@ -10,22 +10,26 @@
     <script type="text/javascript" src="hangman.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../main.js"></script>
-    <script>
-      $(function(){
-        $("#includedContent").load("../sidebar.html");
-      });
-    </script>
   </head>
 
   <body>
-    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
-      <img src="../ic_menu_white_24px.svg" class="menuIcon icon">
+    <div class="header">
+      <a href="../index.html"><img src="../ic_arrow_back_black_24px.svg" class="backIcon icon"></a>
       <h1>Hangman Game</h1>
+      <img src="../ic_info_black_24px.svg" class="infoIcon icon" onclick="showAbout();">
     </div>
-    <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
     <!-- All content below the header -->
     <div class="content">
-      <h2>Created: 2nd Dec, 2017</h2>
+      <div id="aboutContent">
+        <h2>Created: 2nd Dec, 2017</h2>
+        <p>
+          Choose a set of words from which you would like the random word to be chosen. <br/>
+          Pick a letter from below, if it is in the chosen word it will be displayed,<br/>
+          if it is not you will get closer to losing the game (and being hanged).
+        </p>
+        <img src="../ic_close_black_24px.svg" class="closeIcon icon" onclick="hideAbout();">
+      </div>
+
       <div class="hangman" style="margin-top:5vh;">
         <p>words choice: </p>
         <form>
@@ -49,7 +53,6 @@
           </div>
        <p class="textOutput" id="textOutput"></p>
       </div>
-      <div class="seperatorLine"></div>
     </div>
   </body>
 </html>

@@ -13,3 +13,19 @@ function showSidebarButtons(){
   }
   document.getElementsByClassName('closeIcon')[0].style.left="226px";
 }
+
+function showAbout(){
+  about = document.getElementById('aboutContent');
+  closeIcon = document.getElementsByClassName('closeIcon')[0];
+  closeIcon.style.display= "block";
+  about.style.opacity = "0.95";
+  about.style.width = "100%";
+}
+
+function hideAbout(){
+  about = document.getElementById('aboutContent');
+  closeIcon = document.getElementsByClassName('closeIcon')[0];
+  closeIcon.style.display= "none";
+  about.style.opacity = "0";
+  setTimeout(function(){about.style.width ="0";},300)
+}

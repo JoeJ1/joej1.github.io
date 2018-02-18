@@ -10,22 +10,20 @@
     <script type="text/javascript" src="githubStyleImages.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../main.js"></script>
-    <script>
-      $(function(){
-        $("#includedContent").load("../sidebar.html");
-      });
-    </script>
   </head>
   <body onload="showVal();displayImage(document.getElementById('input').value);">
-    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
-      <img src="../ic_menu_white_24px.svg" class="menuIcon icon">
+    <div class="header">
+      <a href="../index.html"><img src="../ic_arrow_back_black_24px.svg" class="backIcon icon"></a>
       <h1>Github Profile Style Image Generation</h1>
+      <img src="../ic_info_black_24px.svg" class="infoIcon icon" onclick="showAbout();">
     </div>
-    <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
     <!-- All content below the header -->
     <div class="content">
-      <h2>Created: 25th Jan, 2018</h2>
-      <p>An attempt at random image generation, similar to that of Github's randomly generated profile pictures (hopefully)</p>
+      <div id="aboutContent">
+        <h2>Created: 25th Jan, 2018</h2>
+        <p>An attempt at random image generation, similar to that of Github's randomly generated profile pictures (hopefully)</p>
+        <img src="../ic_close_black_24px.svg" class="closeIcon icon" onclick="hideAbout();">
+      </div>
       <canvas id="githubImageCanvas" width=500px height=500px></canvas>
       <div class="buttons">
         <button class="button" onclick="displayImage(document.getElementById('input').value);">Generate 1</button>

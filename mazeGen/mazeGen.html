@@ -11,23 +11,22 @@
     <script src="https://github.com/processing/p5.js/releases/download/0.6.0/p5.min.js"></script>
     <script src="../main.js"></script>
     <script type="text/javascript" src="mazeGen.js"></script>
-    <script>
-      $(function(){
-        $("#includedContent").load("../sidebar.html");
-      });
-    </script>
   </head>
   <body onload="showVal()">
-    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
-      <img src="../ic_menu_white_24px.svg" class="menuIcon icon">
+    <div class="header">
+      <a href="../index.html"><img src="../ic_arrow_back_black_24px.svg" class="backIcon icon"></a>
       <h1>Randomised maze generator</h1>
+      <img src="../ic_info_black_24px.svg" class="infoIcon icon" onclick="showAbout();">
     </div>
     <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
     <!-- All content below the header -->
     <div class="content">
-      <h2>Created: 27th Jan, 2018</h2>
-      <p>Randomly generated mazes using "Randomised Prim's algorithm".<br/>More information on algorithm <a href="https://en.wikipedia.org/wiki/Maze_generation_algorithm#Randomized_Prim.27s_algorithm">here</a>.</p>
-      <div id="canvasContainer"></div>
+      <div id="aboutContent">
+        <h2>Created: 27th Jan, 2018</h2>
+        <p>Randomly generated mazes using "Randomised Prim's algorithm".<br/>More information on algorithm <a href="https://en.wikipedia.org/wiki/Maze_generation_algorithm#Randomized_Prim.27s_algorithm">here</a>.</p>
+        <img src="../ic_close_black_24px.svg" class="closeIcon icon" onclick="hideAbout();">
+      </div>
+      <div id="canvasContainer" style="padding-top:5vh;"></div>
       <div class="buttons">
         <button class="button" onclick="setup();">Generate</button>
       </div>

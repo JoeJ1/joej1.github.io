@@ -10,30 +10,26 @@
     <script type="text/javascript" src="noughtsAndCrosses.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../main.js"></script>
-    <script>
-      $(function(){
-        $("#includedContent").load("../sidebar.html");
-      });
-    </script>
   </head>
   <body>
-    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
-      <img src="../ic_menu_white_24px.svg" class="menuIcon icon">
+    <div class="header">
+      <a href="../index.html"><img src="../ic_arrow_back_black_24px.svg" class="backIcon icon"></a>
       <h1>Noughts and Crosses / Tic-Tac-Toe</h1>
+      <img src="../ic_info_black_24px.svg" class="infoIcon icon" onclick="showAbout();">
     </div>
-    <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
     <!-- All content below the header -->
     <div class="content">
-      <h2>Created: 6th Nov, 2017</h2>
-      <div class="noughtsAndCrosses">
-      <p>Currently the oppenent simply randomises which position it chooses, in the future I plan to change it to make it more difficult and interesting.</p>
-      <div class="seperatorLine"></div>
+      <div id="aboutContent">
+        <h2>Created: 6th Nov, 2017</h2>
+        <p>Currently the oppenent simply randomises which position it chooses, in the future I plan to change it to make it more difficult and interesting.</p>
+        <img src="../ic_close_black_24px.svg" class="closeIcon icon" onclick="hideAbout();">
+      </div>
+      <div class="noughtsAndCrosses" style="margin-top: 10vh;">
       <h3 class="turnIndicator" id="turnIndicator" style="display: none;">Your turn (noughts)</h3>
       <div class="noughtsAndCrossesRow1"><button class="noughtsAndCrossesSquare" onclick="play('a1');" id="a1">&nbsp;</button><button class="noughtsAndCrossesSquare" onclick="play('a2');" id="a2">&nbsp;</button><button class="noughtsAndCrossesSquare" onclick="play('a3');" id="a3">&nbsp;</button></div>
       <div class="noughtsAndCrossesRow2"><button class="noughtsAndCrossesSquare" onclick="play('b1');" id="b1">&nbsp;</button><button class="noughtsAndCrossesSquare" onclick="play('b2');" id="b2">&nbsp;</button><button class="noughtsAndCrossesSquare" onclick="play('b3');" id="b3">&nbsp;</button></div>
       <div class="noughtsAndCrossesRow3"><button class="noughtsAndCrossesSquare" onclick="play('c1');" id="c1">&nbsp;</button><button class="noughtsAndCrossesSquare" onclick="play('c2');" id="c2">&nbsp;</button><button class="noughtsAndCrossesSquare" onclick="play('c3');" id="c3">&nbsp;</button></div>
       </div>
     </div>
-    <div class="seperatorLine"></div>
   </body>
 </html>
