@@ -11,25 +11,23 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../main.js"></script>
     <script src="onePassStandardDeviation.js"></script>
-    <script>
-      $(function(){
-        $("#includedContent").load("../sidebar.html");
-      });
-    </script>
   </head>
 
   <body>
-    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
-      <img src="../ic_menu_white_24px.svg" class="menuIcon icon">
+    <div class="header">
+      <a href="mathsHub.html"><img src="../ic_arrow_back_black_24px.svg" class="backIcon icon"></a>
       <h1>One-Pass Calculator</h1>
+      <img src="../ic_info_black_24px.svg" class="infoIcon icon" onclick="showAbout();">
     </div>
-    <div class="buttons sidebar" id="includedContent" onclick="this.style.width='0px';hideSidebarButtons();"></div>
     <!-- All content below the header -->
       <div class="content">
-        <h2>Created: 16th Jan, 2018</h2>
-        <p>Calculates the standard deviation of a set of numbers using the One-Pass method.</p>
-        <p>Enter your set of numbers into the text field below, seperate each value with a comma. Spaces don't matter</p>
-        <p>e.g. 3,9,&nbsp;&nbsp;10, 8, 24, 3,1, 20    would be a valid input.</p>
+        <div id="aboutContent">
+          <h2>Created: 16th Jan, 2018</h2>
+          <p>Calculates the standard deviation of a set of numbers using the One-Pass method.</p>
+          <p>Enter your set of numbers into the text field below, seperate each value with a comma. Spaces don't matter</p>
+          <p>e.g. 3,9,&nbsp;&nbsp;10, 8, 24, 3,1, 20    would be a valid input.</p>
+          <img src="../ic_close_black_24px.svg" class="closeIcon icon" onclick="hideAbout();">
+        </div>
         <input type="text" class="textInput" autofocus id="textInput"></input>
         <div class="buttons">
           <button type="button" style="margin-top:2vh;" onclick="onePass()" id="newGameButton" class="button">Calculate</button>
