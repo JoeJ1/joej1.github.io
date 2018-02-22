@@ -18,7 +18,7 @@ function showAbout(){
   about = document.getElementById('aboutContent');
   closeIcon = document.getElementsByClassName('closeIcon')[0];
   closeIcon.style.display= "block";
-  about.style.opacity = "0.95";
+  about.style.opacity = "1";
   about.style.width = "100%";
 }
 
