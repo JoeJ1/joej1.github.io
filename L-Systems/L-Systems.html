@@ -10,27 +10,27 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://github.com/processing/p5.js/releases/download/0.6.0/p5.min.js"></script>
     <script src="../main.js"></script>
-    <script type="text/javascript" src="minesweeper.js"></script>
+    <script type="text/javascript" src="L-Systems.js"></script>
   </head>
-  <body>
+  <body onload="">
     <div class="header">
       <a href="../index.html"><img src="../ic_arrow_back_black_24px.svg" class="backIcon icon"></a>
-      <h1>Minesweeper</h1>
+      <h1>L systems</h1>
       <img src="../ic_info_black_24px.svg" class="infoIcon icon" onclick="showAbout();">
     </div>
-    <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
     <!-- All content below the header -->
     <div class="content">
       <div id="aboutContent">
-      <h2>Created: 03rd Feb, 2018</h2>
-      <p>To win, flag all the mines (right click)</p>
-      <p>The number on each square indicates the number of mines in the eight neighboring squares,<br/> use left click to uncover a square and right click to mark it as a mine</p>
-      <img src="../ic_close_black_24px.svg" class="closeIcon icon" onclick="hideAbout();">
+        <h2>Created: 10th feb, 2018</h2>
+        <p>A demonstration of various types of L-Systems<br/> More information <a href="https://en.wikipedia.org/wiki/L-system">here</a>.</p>
+        <img src="../ic_close_black_24px.svg" class="closeIcon icon" onclick="hideAbout();">
       </div>
       <div class="buttons">
-        <button class="button" onclick="setup();">Restart</button>
+        <input class="input" type="range" min="1" max="100" step="1" onupdate="setup();"></input>
+        <button class="button" onclick="changeType(this); setup();" id="changeTypeButton">Sierpinski Triangle</button>
+
       </div>
-      <div id="canvasContainer" oncontextmenu="return false;" onmouseup="updateOverlay(event.button)"></div>
+      <div id="canvasContainer"></div>
     </div>
   </body>
 </html>

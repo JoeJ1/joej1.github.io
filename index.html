@@ -1,66 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>JoeJ1 (personal projects)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- setting witdth to be variable (for different sized screens) -->
-    <meta name="description" content="A site for my simple personal projects ">
-    <meta charset="UTF-8">
-    <meta name="theme-color" content="#00796b">
-    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- importing css -->
-    <script src="jquery.js"></script>
-    <script src="main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="../main.js"></script>
-    <script>
-      $(function(){
-        $("#includedContent").load("sidebar.html");
-      });
-    </script>
-  </head>
-  <body>
-    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
-      <img src="ic_menu_white_24px.svg" class="menuIcon icon">
-      <h1>
-      JoeJ1's Personal Projects.
+
+<head>
+  <title>JoeJ1 (personal projects)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- setting witdth to be variable (for different sized screens) -->
+  <meta name="description" content="A site for my simple personal projects ">
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#00796b">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- importing css -->
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <h1>
+      JOEJ1'S PERSONAL PROJECTS
       </h1>
-    </div>
-    <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
-    <!-- All content below the header -->
-    <div class="content">
+    <img src="ic_info_black_24px.svg" class="infoIcon icon" onclick="showAbout();">
+  </div>
+  <!-- All content below the header -->
+  <div class="content">
+    <div id="aboutContent">
       <p>
-        This is a site for my very simple web design projects.<br/>
-        Everything on this site is built entirely from scratch in html, css and js.<br/>
-        You can see my GitHub page <a href="https://github.com/JoeJ1">here</a>.<br/>
-        Please submit any issues or improvements for the site <a href="https://github.com/JoeJ1/JoeJ1.github.io/issues">here</a>.<br/>
-        Click on the side bar to hide it. Click on the title bar to show it again.
+        This is a site for my very simple web design projects.<br/> Everything on this site is built entirely from scratch in html, css and js.<br/> You can see my GitHub page <a href="https://github.com/JoeJ1">here</a>.<br/> Please submit any issues
+        or improvements for the site <a href="https://github.com/JoeJ1/JoeJ1.github.io/issues">here</a>.<br/> Click on the side bar to hide it. Click on the title bar to show it again.
       </p>
-      <!-- A centred lightly shaded line-->
-      <div class="seperatorLine"></div>
-      <h1>Games</h1>
-      <div class="buttons">
-      <a class="button" href="./gameOfPig/gameOfPig.html">Game of Pig</a>
-      <a class="button" href="./hangman/hangman.html">Hangman</a>
-      <a class="button" href="./fotw/fotw.html">Flags Guesser</a>
-      <a class="button" href="./noughtsAndCrosses/noughsAndCrosses.html">Noughts and Crosses</a>
-      <a class="button" href="./minesweeper/minesweeper.html">Minesweeper</a>
-      </div>
-      <div class="seperatorLine"></div>
-      <h1>Demonstrations</h1>
-      <div class="buttons">
-      <a class="button" href="./githubStyleImages/githubStyleImages.html">Github Style Images</a>
-      <a class="button" href="./mazeGen/mazeGen.html">Maze Generator</a>
-      <a class="button" href="./CGOL/CGOL.html">Conway's Game of Life</a>
-      <a class="button" href="./langtonsAnt/langtonsAnt.html">Langton's Ant</a>
-      <a class="button" href="./randomWalker/randomWalker.html">Random Walker</a>
-      <a class="button" href="./randomTurmites/randomTurmites.html">Random Turmites</a>
-      <a class="button" href="./truchetTiles/truchetTiles.html">Truchet Tiles</a>
-      </div>
-      <div class="seperatorLine"></div>
-      <h1>Tools</h1>
-      <div class="buttons">
-      <a class="button" href="./binaryTranslator/binaryTranslator.html">Binary Translator</a>
-      <a class="button" href="./morseCodeTranslator/morseCodeTranslator.html">Morse Code Translator</a>
-      </div>
+      <img src="ic_close_black_24px.svg" class="closeIcon icon" onclick="hideAbout();">
     </div>
-  </body>
+    <div class="buttons" style="text-align:center;">
+      <h1>Games</h1>
+        <a class="button mainPageButton" href="./gameOfPig/gameOfPig.html">Game of Pig</a>
+        <a class="button mainPageButton" href="./hangman/hangman.html">Hangman</a>
+        <a class="button mainPageButton" href="./fotw/fotw.html">Flags Guesser</a>
+        <a class="button mainPageButton" href="./noughtsAndCrosses/noughtsAndCrosses.html">Noughts and Crosses</a>
+        <a class="button mainPageButton" href="./minesweeper/minesweeper.html">Minesweeper</a>
+      <h1>Demonstrations or tests</h2>
+        <a class="button mainPageButton" href="./githubStyleImages/githubStyleImages.html">Github Style Images</a>
+        <a class="button mainPageButton" href="./mazeGen/mazeGen.html">Maze Generator</a>
+        <a class="button mainPageButton" href="./CGOL/CGOL.html">Conway's Game of Life</a>
+        <a class="button mainPageButton" href="./langtonsAnt/langtonsAnt.html">Langton's Ant</a>
+        <a class="button mainPageButton" href="./randomWalker/randomWalker.html">Random Walker</a>
+        <a class="button mainPageButton" href="./randomTurmites/randomTurmites.html">Random Turmites</a>
+        <a class="button mainPageButton" href="./truchetTiles/truchetTiles.html">Truchet Tiles</a>
+      <h1>Tools</h1>
+        <a class="button mainPageButton" href="./binaryTranslator/binaryTranslator.html">Binary Translator</a>
+        <a class="button mainPageButton" href="./morseCodeTranslator/morseCodeTranslator.html">Morse Code Translator</a>
+      <h1>Misc</h1>
+        <a class="button mainPageButton" href="./mathematics/mathsHub.html">Maths Hub</a>
+    </div>
+  </div>
+</body>
+
 </html>

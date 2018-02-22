@@ -10,40 +10,34 @@
     <script type="text/javascript" src="morseCodeTranslator.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../main.js"></script>
-    <script>
-      $(function(){
-        $("#includedContent").load("../sidebar.html");
-      });
-    </script>
   </head>
 
   <body>
-    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
-      <img src="../ic_menu_white_24px.svg" class="menuIcon icon">
+    <div class="header">
+      <a href="../index.html"><img src="../ic_arrow_back_black_24px.svg" class="backIcon icon"></a>
       <h1>Morse Code Translator</h1>
+      <img src="../ic_info_black_24px.svg" class="infoIcon icon" onclick="showAbout();">
     </div>
     <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
     <!-- All content below the header -->
     <div class="content">
-      <h2>Created: 3rd Nov, 2017</h2>
       <div class="morseTranslator" style="margin-top:5vh;">
-
-        <p>Please only use letters and spaces.<br/>
-        Untranslated Characters removed from message</p>
-
+        <div id="aboutContent">
+          <h2>Created: 3rd Nov, 2017</h2>
+          <p>Please only use letters and spaces.<br/>
+          Untranslated Characters removed from message</p>
+          <img src="../ic_close_black_24px.svg" class="closeIcon icon" onclick="hideAbout();">
+        </div>
         <input type="text" name="Text: " class="textInput" autofocus id="textInput">
         <p>
           <div class="buttons">
-
             <button type="button" style="margin-top:2vh;" onclick="run();" id="runButton" class="button">Convert</button>
             <button type="button" style="margin-top:2vh;" onclick="toggleMode();" id="toggleButton" class="button">English to Morse</button>
-
           </div>
         </p>
 
        <p class="textOutput" id="textOutput"></p>
       </div>
-      <div class="seperatorLine"></div>
     </div>
   </body>
 </html>

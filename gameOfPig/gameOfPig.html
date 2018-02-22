@@ -10,26 +10,28 @@
     <script type="text/javascript" src="gameOfPig.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../main.js"></script>
-    <script>
-      $(function(){
-        $("#includedContent").load("../sidebar.html");
-      });
-    </script>
   </head>
   <body>
-    <div class="header" onclick="document.getElementsByClassName('sidebar')[0].style.width='250px';showSidebarButtons();">
-      <img src="../ic_menu_white_24px.svg" class="menuIcon icon">
+    <div class="header">
+      <a href="../index.html"><img src="../ic_arrow_back_black_24px.svg" class="backIcon icon"></a>
       <h1>Game of Pig</h1>
+      <img src="../ic_info_black_24px.svg" class="infoIcon icon" onclick="showAbout();">
     </div>
     <div class="buttons sidebar" id="includedContent"onclick="this.style.width='0px';hideSidebarButtons();"></div>
     <!-- All content below the header -->
     <div class="content">
-      <h2>Created: 3rd Nov, 2017</h2>
-      <h3>
-      Rules:
-      </h3>
-      <p>-If the player rolls a 1, they score nothing and it becomes the next player's turn.<br/>-If the player rolls any other number, it is added to their turn total and the player's turn continues.<br/>-If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.<br/><br/><br/></p>
-      <div class="seperatorLine"></div>
+      <div id="aboutContent">
+        <h2>Created: 3rd Nov, 2017</h2>
+        <h3>
+        Rules:
+        </h3>
+        <p>
+          -If the player rolls a 1, they score nothing and it becomes the next player's turn.<br/>
+          -If the player rolls any other number, it is added to their turn total and the player's turn continues.<br/>
+          -If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+        </p>
+        <img src="../ic_close_black_24px.svg" class="closeIcon icon" onclick="hideAbout();">
+      </div>
       <strong><p class="playerIndicator" id="playerIndicator">Player1's turn</p></strong>
       <div class="gameOfPig">
         <p class="thisRoundScoreText"> This turn score: </p>

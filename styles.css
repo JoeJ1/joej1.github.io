@@ -1,38 +1,44 @@
 *{
-  font-family: helvetica;
+  font-family: futura;
   font-size: 1em;
 }
 
 html, body{
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   background-color: #ffffff;
   text-align: center;
   width: 100%;
   font-size: 100%;
+  overflow-x: hidden;
 }
 
 .header{
   width: 100%;
-  position: fixed;
+  height: 7vh;
   text-align: center;
-  padding: 1em;
+  padding: 0.3em;
+  padding-left: 0.5em;
   display: block;
-  background-color: #00695b;
-  border-bottom: 0.5em solid #004c40;
-  box-shadow: 0.1em 0.1em 0.25em 0.001em #000000;
+  background-color: #ffffff;
+  border-bottom: 0.2em solid #004c8c;
+  /*box-shadow: 0.1em 0.1em 0.025em 0.001em #000000;*/
+  font-size: 2vh;
+  position: absolute;
 }
 
 .header h1{
-  color: #ffffff;
+  color: #494949;
+  text-align: left;
+  padding-left: 4em;
 }
 
 /*All the content in the page below the header*/
 div.content{
-  padding: 0;
-  padding-top: 7.5em;
+  padding: 0 !important;
   background-color: #ffffff;
   margin: 0;
+  margin-top: 10vh;
   width: 100%;
   display: inline-block;
   text-align: center;
@@ -64,7 +70,7 @@ div.seperatorLine{
   margin-top: 0.75em;
   margin-bottom: 0.75em;
   display: inline-block;
-  width: 60%;
+  width: 60vw;
   border-bottom: 0.1em solid #aebfbe;
 }
 .buttons{
@@ -90,69 +96,25 @@ div.seperatorLine{
   padding: 1em 1em 1em;
   margin: 0.5em 0.25em 0em;
   margin-bottom: 1em;
-  background-color: #00796b;
-  box-shadow: 0px 1px 5px 1px #9e9e9e;
+  background-color: #0277bd;
+  box-shadow: 0px 0px 0.5px 0.1px #9e9e9e;
 }
 
 .button:hover{
   transition: box-shadow 0.3s, background-color 0.3s;
-  background-color: #008071;
-  box-shadow: 0px 2px 7px 1px #bdbdbd;
+  background-color: #004c8c;
+  box-shadow: 0px 2px 7px 0.1px #555555;
   cursor: pointer;
-}
-
-.sidebarButton{
-  transition: background-color 0.2s, left 0.5s, width 0.5s;
-  position: relative;
-  left: -250px;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 250px;
-  height: 60px;
-  letter-spacing: 0;
-  font-weight: lighter;
-  font-size: 1em;
-  text-decoration: none;
-  border: none;
-  color: #ffffff;
-  display: block;
-  margin: 0px 0px 10px 0px;
-  background-color: #00796b;
-  text-align: left;
-  padding-left: 0;
-}
-
-.sidebarButton:hover{
-  transition: background-color 0.3s, left;
-  background-color: #00665a;
-  cursor: pointer;
-}
-
-.sidebarButton:active{
-  transition: background-color 0.3s;
-  background-color: #004d44;
 }
 
 button:focus {
   outline: 0;
 }
 
-.sidebar{
-  transition: width 0.5s;
-  background-color: #00796b;
-  margin-top: 0vh;
-  width: 0px;
-  height: 100vh;
-  position: fixed;
-  box-shadow: 0em 0.1em 0.7em 0.02em #000000;
-  border-top: 0.5em solid #004c40;
-  overflow-y: auto;
-}
-
 
 .button:active{
   transition: background-color 0.25s;
-  background-color: #00e6cb;
+  background-color: #f5f5f5;
 }
 
 .textOutput{
@@ -175,9 +137,9 @@ button:focus {
 .letterButton{
   color: #ffffff;
   transition: box-shadow, background-color 0.3s;
-  background-color: #00796b;
+  background-color: #0277bd;
   font-size: 1.3em;
-  border: 0.1em solid #004c40;
+  border: 0.1em solid #68bfc8;
   margin: 0;
   padding: 0.2;
   margin-top: 2vw;
@@ -191,23 +153,31 @@ button:focus {
   cursor: pointer;
 }
 
-.closeIcon{
-  padding-right: 10px;
-  padding-top: 5px;
-  position: fixed;
-  left: -30px;
-  top: 5px;
-  transition: left 0.5s;
-  z-index: 2;
+
+.infoIcon{
+  position: absolute;
+  right: 34px;
+  top: 1.2em;
+  width: 2em;
+  height: 2em;
 }
 
-.menuIcon{
-  padding-right: 5px;
-  padding-top: 5px;
-  position: fixed;
-  left: 10px;
-  top: 5px;
-  transition: left 0.5s;
+.backIcon{
+  position: absolute;
+  left: 34px;
+  top: 1.2em;
+  width: 2em;
+  height: 2em;
+}
+
+.closeIcon{
+  position: absolute;
+  display: none;
+  right: 34px;
+  top: 1.2em;
+  width: 2em;
+  height: 2em;
+  z-index: 5;
 }
 
 .icon:hover{
@@ -229,3 +199,46 @@ button:focus {
 #clearButton{
   display:none;
 }
+
+#aboutContent{
+  opacity: 0;
+  transition: opacity 0.3s;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-y: auto;
+  padding-top: 5vh;
+  text-align: center;
+}
+/*@media screen and (orientation:portrait){
+  .mainPageButton{
+    display: inline-block;
+    float: left;
+    width: 33vw;
+    height: 25vw;
+    padding: 0;
+    /*       t     r       b       l    *\/
+    margin: 1vw 0.16665vw 0vw 0.16665vw;
+    border-radius: 0;
+    font-size: 5vw;
+  }
+}
+
+@media screen and (orientation:landscape){
+  .mainPageButton{
+    display: inline-block;
+    float: left;
+    width: 32.85vw;
+    height: 10vw;
+    padding: 0;
+    /*       t     r       b       l    *\/
+    margin: 1vw 0.165vw 0vw 0.165vw;
+    border-radius: 0;
+    font-size: 3em;
+    vertical-align: middle;
+  }
+}*/
